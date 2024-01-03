@@ -14,7 +14,7 @@ export const Buttons = ({ text }: IProps) => {
       <I.Button>
         <I.Icon
           onClick={() => {
-            navigate("/money");
+            navigate("/cash");
           }}
         >
           <Arrow />

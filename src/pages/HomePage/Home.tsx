@@ -11,7 +11,7 @@ export const Home = () => {
   const Handle_Click = () => {
     setgoToPage(!goToPage);
     if (value.length == 4) {
-      return navigate("./cash");
+      return navigate("./menu");
     } else {
       alert("Lütfen şifrenizi giriniz.");
     }

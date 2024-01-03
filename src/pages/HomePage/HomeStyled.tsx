@@ -20,15 +20,16 @@ const Password = styled.div`
 
 const Inputs = styled.input`
   margin: 10px;
-  width: 700px;
-  height: 100px;
+  width: 430px;
+  height: 120px;
 `;
 
 const Button = styled.span`
-  display: flex;
-  justify-content: center;
   > button {
-    width: 300px;
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 `;
 

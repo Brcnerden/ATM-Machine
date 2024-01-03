@@ -1,8 +1,6 @@
 import * as M from "./MoneyStyled";
 
 export const Money = () => {
-  const salary: string | null = prompt("aylık maaş tutarınızı giriniz");
-
   return (
     <M.Container>
       <M.User>
@@ -27,10 +25,10 @@ export const Money = () => {
         </thead>
         <tbody>
           <tr>
-            <th>{salary}</th>
+            <th>13000</th>
             <th>TL</th>
-            <th>12</th>
-            <th>{salary}</th>
+            <th>13</th>
+            <th>13000</th>
           </tr>
           <tr>
             <th></th>
@@ -49,7 +47,7 @@ export const Money = () => {
             <th></th>
             <th></th>
 
-            <M.Total>{salary}</M.Total>
+            <M.Total>13000</M.Total>
           </tr>
         </tbody>
       </M.Table>

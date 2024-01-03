@@ -1,23 +1,35 @@
 import styled from "@emotion/styled";
 
-const Container = styled.header`
+const Container = styled.body`
   width: 100vw;
   height: 100vh;
-  background-color: #5db15d;
-`;
-
-const Text = styled.div`
-  color: #008000;
-  font-size: 40px;
-  font-weight: bold;
-  text-align: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
-`;
-
-const Buttons = styled.div`
+  background-color: #008000;
   display: flex;
+  text-align: center;
   justify-content: center;
 `;
 
-export { Container, Buttons, Text };
+const UserText = styled.div`
+  max-width: 400px;
+  width: 100%;
+  height: 70px;
+  border: 1px solid black;
+  margin: 16px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  > p {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 5px;
+  }
+  > p {
+    padding-top: 10px;
+  }
+  > span {
+    padding-top: 10px;
+  }
+`;
+
+export { Container, UserText };
