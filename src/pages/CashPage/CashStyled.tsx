@@ -5,8 +5,8 @@ const Container = styled.body`
   height: 100vh;
   background-color: #008000;
   display: flex;
-  text-align: center;
   justify-content: center;
+  align-items: center;
 `;
 
 const UserText = styled.div`
@@ -19,6 +19,7 @@ const UserText = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 10px;
+  margin-bottom: 20px;
   > p {
     display: flex;
     justify-content: space-around;
@@ -32,4 +33,8 @@ const UserText = styled.div`
   }
 `;
 
-export { Container, UserText };
+const LeftList = styled.div`
+  margin-top: 18px;
+`;
+
+export { Container, UserText, LeftList };

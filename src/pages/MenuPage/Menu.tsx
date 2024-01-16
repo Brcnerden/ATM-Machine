@@ -7,16 +7,16 @@ export const Menu = () => {
       <C.Text>Seçiminizi Yapınız</C.Text>
       <C.Buttons>
         <div>
-          <Buttons text={"Para Çekme"} />
-          <Buttons text={"Para Yatırma"} />
-          <Buttons text={"Bireysel İhtiyaç Kredisi Başvurusu"} />
-          <Buttons text={"Şifrematik/Mobil İmza ilePara Çekme"} />
+          <Buttons path="/cash" text={"Para Çekme"} />
+          <Buttons path="/cash" text={"Para Yatırma"} />
+          <Buttons path="/cash" text={"Bireysel İhtiyaç Kredisi Başvurusu"} />
+          <Buttons path="/cash" text={"Şifrematik/Mobil İmza ilePara Çekme"} />
         </div>
         <div>
-          <Buttons text={"Kredi Kartı Borcu Ödeme"} />
-          <Buttons text={"Fatura Ödeme"} />
-          <Buttons text={"Kontor yükleme"} />
-          <Buttons text={"Diğer"} />
+          <Buttons path="/cash" text={"Kredi Kartı Borcu Ödeme"} />
+          <Buttons path="/cash" text={"Fatura Ödeme"} />
+          <Buttons path="/cash" text={"Kontor yükleme"} />
+          <Buttons path="/cash" text={"Diğer"} />
         </div>
       </C.Buttons>
     </C.Container>

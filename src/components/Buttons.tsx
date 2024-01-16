@@ -4,9 +4,10 @@ import * as I from "./ButtonsStyled";
 
 type IProps = {
   text: string;
+  path: string;
 };
 
-export const Buttons = ({ text }: IProps) => {
+export const Buttons = ({ text, path }: IProps) => {
   const navigate = useNavigate();
 
   return (
@@ -14,7 +15,7 @@ export const Buttons = ({ text }: IProps) => {
       <I.Button>
         <I.Icon
           onClick={() => {
-            navigate("/cash");
+            navigate(path);
           }}
         >
           <Arrow />
