@@ -6,6 +6,7 @@ import { Money } from "./pages/MoneyPage/Money";
 import { Cash } from "./pages/CashPage/Cash";
 import { Amount } from "./pages/AmountPage/Amount";
 import { Validation } from "./pages/ValidationPage/Validation";
+import { FinishPage } from "./pages/FinishPage/FinishPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path="/money" element={<Money />} />
       <Route path="/amount" element={<Amount />} />
       <Route path="/validation" element={<Validation />} />
+      <Route path="/finish" element={<FinishPage />} />
     </Routes>
   );
 }

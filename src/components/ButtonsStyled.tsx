@@ -20,10 +20,11 @@ const Icon = styled.div`
   width: 40px;
   height: 36px;
   border: 0px solid black;
-  background-color: #008000;
+  background-color: white;
   border-radius: 50%;
   > svg {
-    fill: white;
+    fill: #008000;
+    margin: 10px;
   }
 `;
 

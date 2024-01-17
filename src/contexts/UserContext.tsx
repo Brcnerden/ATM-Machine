@@ -1,9 +1,8 @@
 import { createContext, useState } from "react";
 
 interface CurrentMoneyContextType {
-  money?: string;
-  user: string | null;
-  setUser?: React.Dispatch<React.SetStateAction<null>>;
+  money: string | null;
+  setMoney?: React.Dispatch<React.SetStateAction<null>>;
 }
 
 interface UserContextType {
@@ -11,14 +10,14 @@ interface UserContextType {
 }
 
 export const MoneyContext = createContext<CurrentMoneyContextType>({
-  user: null,
+  money: null,
 });
 
 export const UserContext = ({ children }: UserContextType) => {
-  const [user, setUser] = useState(null);
+  const [money, setMoney] = useState(null);
 
   return (
-    <MoneyContext.Provider value={{ user, setUser }}>
+    <MoneyContext.Provider value={{ money, setMoney }}>
       {children}
     </MoneyContext.Provider>
   );

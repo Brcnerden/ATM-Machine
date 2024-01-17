@@ -2,9 +2,11 @@ import * as V from "./ValidationStyled";
 import { useContext } from "react";
 import { MoneyContext } from "../../contexts/UserContext";
 import Arrow from "../../Icon/Arrow";
+import { useNavigate } from "react-router";
 
 export const Validation = () => {
   const { user } = useContext(MoneyContext);
+  const navigate = useNavigate();
 
   return (
     <V.Container>
@@ -22,9 +24,13 @@ export const Validation = () => {
         <p>{user},00 TL</p>
         <V.Arrow>
           Onayla
-          <span>
+          <button
+            onClick={() => {
+              navigate("/finish");
+            }}
+          >
             <Arrow />
-          </span>
+          </button>
         </V.Arrow>
       </V.ConfirmationButton>
     </V.Container>

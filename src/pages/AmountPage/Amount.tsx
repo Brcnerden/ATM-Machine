@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 export const Amount: React.FC = () => {
   const navigate = useNavigate();
 
-  const { user, setUser } = useContext(MoneyContext);
+  const { money, setMoney } = useContext(MoneyContext);
 
   const handle_Amount = () => {
     navigate("/validation");
@@ -36,7 +36,7 @@ export const Amount: React.FC = () => {
         </A.Text>
 
         <A.AmountContainer>
-          <input value={user} onChange={(e) => setUser(e.target.value)} />
+          <input value={money} onChange={(e) => setMoney(e.target.value)} />
           <span> , </span>
           <A.Input />
           <span> TL </span>

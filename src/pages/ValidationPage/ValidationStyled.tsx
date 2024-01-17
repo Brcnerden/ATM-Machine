@@ -66,8 +66,9 @@ const ConfirmationButton = styled.div`
 const Arrow = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-top: -20px;
 
-  > span {
+  > button {
     display: inline-block;
     width: 40px;
     height: 36px;
@@ -76,10 +77,10 @@ const Arrow = styled.div`
     border-radius: 50%;
     text-align: center;
     margin-right: 10px;
-  }
-
-  > svg {
-    fill: white;
+    > svg {
+      fill: white;
+      transform: rotate(180deg);
+    }
   }
 `;
 
