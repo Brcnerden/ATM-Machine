@@ -3,9 +3,13 @@ import { useContext } from "react";
 import { MoneyContext } from "../../contexts/UserContext";
 import Arrow from "../../Icon/Arrow";
 import { useNavigate } from "react-router";
+interface CurrentMoneyContextType {
+  money: string | null;
+  setMoney?: React.Dispatch<React.SetStateAction<null>>;
+}
 
 export const Validation = () => {
-  const { user } = useContext(MoneyContext);
+  const { money } = useContext<CurrentMoneyContextType>(MoneyContext);
   const navigate = useNavigate();
 
   return (
@@ -15,13 +19,13 @@ export const Validation = () => {
         <hr />
         <V.Amount>
           <div>Çekilecek Tutar</div>
-          <button>{user}TL</button>
+          <button>{money}TL</button>
         </V.Amount>
         <hr />
         <span>Kullanılabilir Bakiye</span>
       </V.Box>
       <V.ConfirmationButton>
-        <p>{user},00 TL</p>
+        <p>{money},00 TL</p>
         <V.Arrow>
           Onayla
           <button
