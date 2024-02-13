@@ -25,3 +25,23 @@ export const Buttons = ({ text, path }: IProps) => {
     </div>
   );
 };
+
+export const Buttonsturn = ({ text, path }: IProps) => {
+  const navigate = useNavigate();
+
+  return (
+    <I.Buttonturn>
+      <I.Button>
+        {text}
+
+        <I.Icon
+          onClick={() => {
+            navigate(path);
+          }}
+        >
+          <Arrow />
+        </I.Icon>
+      </I.Button>
+    </I.Buttonturn>
+  );
+};

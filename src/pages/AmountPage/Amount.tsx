@@ -3,10 +3,15 @@ import { MoneyContext } from "../../contexts/UserContext";
 import * as A from "./AmountStyled";
 import { useNavigate } from "react-router-dom";
 
+interface CurrentMoneyContextType {
+  money: string | null;
+  setMoney?: React.Dispatch<React.SetStateAction<null>> | undefined;
+}
+
 export const Amount: React.FC = () => {
   const navigate = useNavigate();
 
-  const { money, setMoney } = useContext(MoneyContext);
+  const { money, setMoney } = useContext<CurrentMoneyContextType>(MoneyContext);
 
   const handle_Amount = () => {
     navigate("/validation");
@@ -36,7 +41,12 @@ export const Amount: React.FC = () => {
         </A.Text>
 
         <A.AmountContainer>
-          <input value={money} onChange={(e) => setMoney(e.target.value)} />
+          <input
+            value={money ?? " "}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setMoney(e.target.value)
+            }
+          />
           <span> , </span>
           <A.Input />
           <span> TL </span>

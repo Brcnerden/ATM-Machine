@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-const Container = styled.body`
+const Container = styled.header`
   background-color: #008000;
   width: 100vw;
   height: 100vh;
@@ -22,6 +22,10 @@ const Inputs = styled.input`
   margin: 10px;
   width: 430px;
   height: 120px;
+  @media only screen and (max-width: 600px) {
+    max-width: 300px;
+    width: 100%;
+  }
 `;
 
 const Button = styled.span`

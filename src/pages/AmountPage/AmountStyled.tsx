@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
 
 const Container = styled.header`
-  width: 100vw;
+  position: relative;
+  width: 100%;
   height: 100vh;
   background-color: #008000;
 `;
@@ -15,6 +16,12 @@ const Box = styled.div`
   right: 0;
   margin-right: 20px;
   font-size: 25px;
+  @media only screen and (max-width: 600px) {
+    width: 310px;
+    height: 250px;
+    font-size: 10px;
+    bottom: 15px;
+  }
 `;
 const Text = styled.div`
   display: flex;

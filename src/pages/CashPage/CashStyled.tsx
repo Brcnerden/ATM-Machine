@@ -1,12 +1,17 @@
 import styled from "@emotion/styled";
 
-const Container = styled.body`
-  width: 100vw;
+const Container = styled.header`
   height: 100vh;
-  background-color: #008000;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media only screen and (max-width: 900px) {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 10px;
+  }
 `;
 
 const UserText = styled.div`
@@ -20,6 +25,12 @@ const UserText = styled.div`
   flex-direction: column;
   padding-top: 10px;
   margin-bottom: 20px;
+  @media only screen and (max-width: 900px) {
+    margin-left: 20px;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 300px;
+  }
   > p {
     display: flex;
     justify-content: space-around;
@@ -35,6 +46,15 @@ const UserText = styled.div`
 
 const LeftList = styled.div`
   margin-top: 18px;
+
+  @media only screen and (max-width: 900px) {
+    margin-top: 0;
+  }
 `;
 
-export { Container, UserText, LeftList };
+const RightList = styled.div`
+  @media only screen and (max-width: 900px) {
+  }
+`;
+
+export { Container, UserText, LeftList, RightList };

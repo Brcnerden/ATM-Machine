@@ -14,6 +14,26 @@ const Button = styled.button`
   justify-content: space-between;
   padding-left: 15px;
   border: none;
+
+  @media only screen and (max-width: 600px) {
+    width: 300px;
+    font-size: 10px;
+  }
+`;
+
+const Buttonturn = styled.div`
+  > button {
+    padding-right: 20px;
+    @media only screen and (max-width: 900px) {
+      flex-direction: row-reverse;
+    }
+  }
+  button > div > svg {
+    transform: rotate(180deg);
+    @media only screen and (max-width: 900px) {
+      transform: rotate(0);
+    }
+  }
 `;
 
 const Icon = styled.div`
@@ -28,4 +48,4 @@ const Icon = styled.div`
   }
 `;
 
-export { Button, Icon };
+export { Button, Icon, Buttonturn };

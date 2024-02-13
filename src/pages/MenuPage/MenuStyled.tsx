@@ -18,6 +18,14 @@ const Text = styled.div`
 const Buttons = styled.div`
   display: flex;
   justify-content: center;
+  @media only screen and (max-width: 900px) {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @media only screen and (max-width: 600px) {
+  }
 `;
 
 export { Container, Buttons, Text };

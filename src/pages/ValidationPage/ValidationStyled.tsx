@@ -20,6 +20,18 @@ const Box = styled.div`
   justify-content: center;
   text-align: center;
   background-color: white;
+  @media only screen and (max-width: 600px) {
+    max-width: 400px;
+    width: 100%;
+    margin-left: 0;
+    left: 12%;
+  }
+  @media only screen and (max-width: 450px) {
+    max-width: 350px;
+    width: 100%;
+    left: 9%;
+    font-size: 15px;
+  }
   > span {
     margin-top: 50px;
     text-align: left;
@@ -50,7 +62,10 @@ const ConfirmationButton = styled.div`
   width: 500px;
   height: 100px;
   background-color: white;
-
+  @media only screen and (max-width: 450px) {
+    max-width: 400px;
+    width: 100%;
+  }
   > p {
     position: relative;
     width: 200px;

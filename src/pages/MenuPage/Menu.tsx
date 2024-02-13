@@ -1,5 +1,6 @@
-import { Buttons } from "../../components/Buttons";
+import { Buttons, Buttonsturn } from "../../components/Buttons";
 import * as C from "./MenuStyled";
+import "../../index.css";
 
 export const Menu = () => {
   return (
@@ -13,10 +14,10 @@ export const Menu = () => {
           <Buttons path="/cash" text={"Şifrematik/Mobil İmza ilePara Çekme"} />
         </div>
         <div>
-          <Buttons path="/cash" text={"Kredi Kartı Borcu Ödeme"} />
-          <Buttons path="/cash" text={"Fatura Ödeme"} />
-          <Buttons path="/cash" text={"Kontor yükleme"} />
-          <Buttons path="/cash" text={"Diğer"} />
+          <Buttonsturn path="/cash" text={"Kredi Kartı Borcu Ödeme"} />
+          <Buttonsturn path="/cash" text={"Fatura Ödeme"} />
+          <Buttonsturn path="/cash" text={"Kontor yükleme"} />
+          <Buttonsturn path="/cash" text={"Diğer"} />
         </div>
       </C.Buttons>
     </C.Container>
