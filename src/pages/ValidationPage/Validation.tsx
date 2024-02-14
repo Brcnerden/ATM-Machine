@@ -1,11 +1,12 @@
 import * as V from "./ValidationStyled";
-import { useContext } from "react";
+import { useContext, Dispatch, SetStateAction } from "react";
 import { MoneyContext } from "../../contexts/UserContext";
 import Arrow from "../../Icon/Arrow";
 import { useNavigate } from "react-router";
+
 interface CurrentMoneyContextType {
-  money: string | null;
-  setMoney?: React.Dispatch<React.SetStateAction<null>>;
+  money: string | number | null; // money alanının türü string, number veya null olabilir
+  setMoney?: Dispatch<SetStateAction<string | number | null>> | undefined;
 }
 
 export const Validation = () => {
