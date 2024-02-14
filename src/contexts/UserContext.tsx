@@ -1,8 +1,8 @@
-import { createContext, useState } from "react";
+import { createContext, useState, Dispatch, SetStateAction } from "react";
 
 interface CurrentMoneyContextType {
-  money: string | null;
-  setMoney?: React.Dispatch<React.SetStateAction<null>>;
+  money: string | number | null; // money alanının türü string, number veya null olabilir
+  setMoney?: Dispatch<SetStateAction<string | number | null>> | undefined;
 }
 
 interface UserContextType {
@@ -14,7 +14,7 @@ export const MoneyContext = createContext<CurrentMoneyContextType>({
 });
 
 export const UserContext = ({ children }: UserContextType) => {
-  const [money, setMoney] = useState(null);
+  const [money, setMoney] = useState<string | number | null>(null); // Başlangıç değeri string, number veya null olabilir
 
   return (
     <MoneyContext.Provider value={{ money, setMoney }}>

@@ -1,11 +1,11 @@
-import { useContext } from "react";
+import { useContext, Dispatch, SetStateAction } from "react";
 import { MoneyContext } from "../../contexts/UserContext";
 import * as A from "./AmountStyled";
 import { useNavigate } from "react-router-dom";
 
 interface CurrentMoneyContextType {
-  money: string | null;
-  setMoney?: React.Dispatch<React.SetStateAction<null>> | undefined;
+  money: string | number | null; // money alanının türü string, number veya null olabilir
+  setMoney?: Dispatch<SetStateAction<string | number | null>> | undefined;
 }
 
 export const Amount: React.FC = () => {
@@ -44,7 +44,7 @@ export const Amount: React.FC = () => {
           <input
             value={money ?? " "}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setMoney(e.target.value)
+              setMoney?.(parseFloat(e.target.value))
             }
           />
           <span> , </span>
